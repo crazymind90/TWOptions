@@ -1,0 +1,13 @@
+
+ApplyAlerts = "Apply confirmation alert on :";
+Followbutton = "Follow button";
+Replybutton = "Reply button";
+Tweetbutton = "Tweet button";
+Retweetbutton = "Retweet button";
+Likebutton = "Like button";
+DMsendbutton = "DM send button";
+ApplyChanges = "Respring";
+DMTyping = "Disable DM typing indicator";
+OtherOptions = "Other Options";
+EnableQR = "Enable QR feature";
+TweetVoice = "Enable voice feature in tweet";

@@ -3,12 +3,11 @@
 
 #pragma GCC diagnostic ignored "-Wunused-variable"
 
-
+#define greenColor [UIColor colorWithRed:1/255.0f green:152/255.0f blue:117/255.0f alpha:1.0f]
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "CMManager.h"
-
 
 
 
@@ -124,14 +123,22 @@ return;
     }];
 
 
-
   return;
 }
 
 %end
+
+
+
+%hook T1DefaultSlideshowStatusViewActionsDataSource
+-(bool)shouldEnableFavoriteActionForStatus:(id)arg1 account:(id)arg2 {
+
+return FALSE;
+%orig (NULL, NULL);
+
+}
 %end
-
-
+%end
 
 
 
@@ -160,8 +167,53 @@ return;
 
 
 
+
+
+%group DMTyping
+%hook T1DirectMessageTypingIndicatorController
+-(void) publishTypingIndicator {
+
+	  return;
+}
+
+
+%end
+%end
+
+
+
+
+%group QR
+%hook TFNTwitterAccount
+- (bool)isProfileQRCodeButtonEnabled {
+
+	  return YES;
+}
+
+- (bool)isQRLoginEnabled {
+
+    return YES;
+}
+
+%end
+%end
+
+
+%group TweetVoice
+%hook T1PhotoMediaRailViewController
+-(bool) isVoiceButtonHidden {
+
+  return NO;
+}
+%end
+%end
+
+
+
+
 %ctor {
 
+%init();
 
 	NSString *PlistPath = @"/var/mobile/Library/Preferences/com.crazymind90.twoptions.plist";
 
@@ -173,6 +225,9 @@ return;
 	bool Reply = [[MutDoction objectForKey:@"ReplyConf"] boolValue];
 	bool Like = [[MutDoction objectForKey:@"LikeConf"] boolValue];
 	bool DM = [[MutDoction objectForKey:@"DMConf"] boolValue];
+  bool DMTyping = [[MutDoction objectForKey:@"DMTyping"] boolValue];
+  bool QR = [[MutDoction objectForKey:@"QR"] boolValue];
+  bool TweetVoice = [[MutDoction objectForKey:@"TweetVoice"] boolValue];
 
 	if (Follow)
 		%init(Follow);
@@ -191,6 +246,15 @@ return;
 
 						if (DM)
 							%init(DM);
+
+              if (DMTyping)
+                %init(DMTyping);
+
+                if (QR)
+                  %init(QR);
+
+                  if (TweetVoice)
+                    %init(TweetVoice);
 
 
 

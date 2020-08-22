@@ -18,7 +18,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Apply confirmation alert on :</string>
+			<string>ApplyAlerts</string>
 		</dict>
 		<dict>
 			<key>icon</key>
@@ -32,7 +32,7 @@
 			<key>key</key>
 			<string>FollowConf</string>
 			<key>label</key>
-			<string>Follow button</string>
+			<string>Followbutton</string>
 		</dict>
 		<dict>
 			<key>icon</key>
@@ -46,7 +46,7 @@
 			<key>key</key>
 			<string>ReplyConf</string>
 			<key>label</key>
-			<string>Reply button</string>
+			<string>Replybutton</string>
 		</dict>
 		<dict>
 			<key>icon</key>
@@ -60,7 +60,7 @@
 			<key>key</key>
 			<string>TweetConf</string>
 			<key>label</key>
-			<string>Tweet button</string>
+			<string>Tweetbutton</string>
 		</dict>
 		<dict>
 			<key>icon</key>
@@ -74,7 +74,7 @@
 			<key>key</key>
 			<string>RetweetConf</string>
 			<key>label</key>
-			<string>Retweet button</string>
+			<string>Retweetbutton</string>
 		</dict>
 		<dict>
 			<key>icon</key>
@@ -88,7 +88,7 @@
 			<key>key</key>
 			<string>LikeConf</string>
 			<key>label</key>
-			<string>Like button</string>
+			<string>Likebutton</string>
 		</dict>
 		<dict>
 			<key>icon</key>
@@ -102,7 +102,55 @@
 			<key>key</key>
 			<string>DMConf</string>
 			<key>label</key>
-			<string>DM send button</string>
+			<string>DMsendbutton</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>OtherOptions</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>icona@2x.png</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.crazymind90.twoptions</string>
+			<key>key</key>
+			<string>DMTyping</string>
+			<key>label</key>
+			<string>DMTyping</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>icona@2x.png</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.crazymind90.twoptions</string>
+			<key>key</key>
+			<string>QR</string>
+			<key>label</key>
+			<string>EnableQR</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>icona@2x.png</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.crazymind90.twoptions</string>
+			<key>key</key>
+			<string>TweetVoice</string>
+			<key>label</key>
+			<string>TweetVoice</string>
 		</dict>
 		<dict>
 			<key>cell</key>

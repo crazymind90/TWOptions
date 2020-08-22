@@ -21,3 +21,7 @@ include $(THEOS_MAKE_PATH)/aggregate.mk
 
 install3::
 		install3.exec
+
+
+install2::
+		install2.exec
